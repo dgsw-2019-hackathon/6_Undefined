@@ -1,7 +1,11 @@
 import { observable } from 'mobx';
 
 class ExStore {
-  @observable hello = "hello";
+  @observable postList = [
+  {
+    id:"12",
+  }
+  ];
 }
 
 export default ExStore;
