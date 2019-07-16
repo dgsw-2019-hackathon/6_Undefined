@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import './MyInfo.scss';
 
 export default class MyInfo extends Component {
   render() {
     return (
-      <div>
-        내정보 페이지입니다.
+      <div className="MyInfo">
+        <div>
+          
+        </div>
       </div>
     )
   }
