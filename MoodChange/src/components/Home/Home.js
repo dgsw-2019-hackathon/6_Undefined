@@ -27,7 +27,7 @@ class Home extends Component {
           </ul>
         </div>
         <MoodCard />
-        <button onClick={this.handleChangeWriteUrl}><img src={writeImg} alt="writeImg" />게시물 작성</button>
+        <button className="WriteBtn" onClick={this.handleChangeWriteUrl}><img src={writeImg} alt="writeImg" />게시물 작성</button>
       </div>
     )
   }

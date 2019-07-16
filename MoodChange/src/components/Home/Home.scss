@@ -1,9 +1,7 @@
 @import "utils";
 
 .Home {
-  background-image: url("../../image/main배경.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #ffb3d3;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -72,7 +70,7 @@
       }
     }
   }
-  button {
+  .WriteBtn {
     display: flex;
     align-items: center;
     justify-content: center;

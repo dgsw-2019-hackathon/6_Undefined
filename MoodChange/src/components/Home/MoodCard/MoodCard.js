@@ -46,9 +46,10 @@ export default class MoodCard extends Component {
             <img src={ this.state.likeCheck === true ? unLike : like } alt="like" onClick={this.handleChangeLike} />
             <span>12</span>
           </div>
-          <div className="MoodCard-foot-comment">
+          <div className={`MoodCard-foot-comment ${ this.state.commentCheck === true ? '' : 'hide' }`}>
             <img src={ profile } alt="profile" />
-            <input className={ this.state.commentCheck === true ? "" : "hide" } type="text" placeholder="댓글을 입력하세요..." />
+            <input type="text" placeholder="댓글을 입력하세요..." />
+            <button>댓글</button>
           </div>
         </div>        
       </div>
