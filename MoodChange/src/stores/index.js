@@ -1,7 +1,11 @@
-import ExStore from './ExStore';
+import Member from './Member';
+import MoodBoardList from './MoodBoardList';
+import UserMoodBoardList from './UserMoodBoardList';
 
 const stores = {
-  ex: new ExStore(),
+  MemberStore: new Member(),
+  MoodBoardListStore: new MoodBoardList(),
+  UserMoodBoardListStore: new UserMoodBoardList(),
 };
 
 export default stores;
