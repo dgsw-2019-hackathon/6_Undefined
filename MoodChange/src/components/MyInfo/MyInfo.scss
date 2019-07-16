@@ -4,4 +4,25 @@
     background-position: center center;
     width: 100vw;
     height: 100vh;
+
+    &-NavBar {
+        
+        width: 500px;
+        height: 500px;
+
+        &-Profile {
+            background-color: #ebeced;
+        }
+        &-Account {
+            background-color: #ebeced;
+        }
+        &-MyBoard {
+            background-color: #ebeced;
+        }
+    }
+
+    &-MyInfo-Main {
+
+
+    }
 }
