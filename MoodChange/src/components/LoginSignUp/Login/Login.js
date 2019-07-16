@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { SERVER } from '../../../config/config.json';
 import Swal from 'sweetalert2';
+import {withRouter} from 'react-router-dom';
 // import sha512 from 'js-sha512';
 import './Login.scss';
 
@@ -16,10 +17,10 @@ class Login extends Component {
     }
 
     handleChange = e => {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    };
+        this.setState({
+          [e.target.name]: e.target.value
+        });
+      };
 
     handleLogin = async _ => {
         await axios
@@ -40,7 +41,8 @@ class Login extends Component {
             console.log(e);
             Swal.fire({
                 type: 'error',
-                title: '로그인 실패'
+                title: '로그인 실패',
+                text: e.response.status
               });
             localStorage.removeItem('token');
           });
@@ -73,4 +75,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);
