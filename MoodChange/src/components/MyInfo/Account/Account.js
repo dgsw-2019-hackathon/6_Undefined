@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Account.scss';
 import fixIcon from "../../../image/수정연필.png";
+import out from "../../../image/out.png";
 
 class Account extends Component {
     render() {
@@ -25,6 +26,7 @@ class Account extends Component {
                         <img className="Account-Fix-btn-icon" src={fixIcon} alt=""/> 프로필 수정
                     </button>
                 </div>
+                <img src={ out } className="Out" alt=""/>
             </div>
         );
     }
