@@ -29,12 +29,14 @@ class Login extends Component {
             user_password: this.state.pw
           })
           .then(async e => {
+            console.log(e.data.data);
             await Swal.fire({
                 type: 'success',
                 title: '띵동',
                 text: '로그인 성공!'
               });
-            localStorage.setItem('token', e.data.token);
+            localStorage.setItem('token', e.data.data);
+            console.log(localStorage.getItem('token'));
             this.props.history.push('/');
           })
           .catch(e => {

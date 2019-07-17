@@ -6,8 +6,29 @@ import profile from '../../image/1.jpg';
 import writeImg from '../../image/내 게시물white.png';
 import MoodCard from './MoodCard';
 import {withRouter} from 'react-router-dom';
+import { observer, inject } from 'mobx-react';
 
+@inject('store')
+@observer
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      moodBoardList: []
+    };
+  }
+
+  async componentDidMount() {
+    const { store } = this.props;
+    await store.MoodBoardListStore.getMoodBoardList();
+    
+    this.setState({
+      moodBoardList: store.MoodBoardListStore.MoodBoardList
+    });
+
+    console.log(this.state.moodBoardList);
+  }
+
   handleChangeWriteUrl = () => {
     this.props.history.push('/WriteMoodBoard');
   }
@@ -26,7 +47,21 @@ class Home extends Component {
             <li className="profile" onClick={this.handleChangeMyInfoUrl}><img src={profile} alt="profile" />안채원</li>
           </ul>
         </div>
-        <MoodCard />
+        <div className="cardList">
+          {
+            this.state.moodBoardList.map((board, i) => {
+              return (
+                <MoodCard
+                  userName={board.user_id}
+                  writeTime={board.date_time}
+                  contents={board.content}
+                  commentCheck={board.comment_check}
+                  boardId={board.id}
+                />
+              );
+            })
+          }
+        </div>
         <button className="WriteBtn" onClick={this.handleChangeWriteUrl}><img src={writeImg} alt="writeImg" />게시물 작성</button>
       </div>
     )

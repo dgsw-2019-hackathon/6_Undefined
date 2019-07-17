@@ -4,13 +4,13 @@ import MoodBoardListRepository from './MoodBoardListRepository';
 
 @autobind
 class MoodBoardListStore {
-  @observable info = [];
+  @observable MoodBoardList = [];
 
-  @action async getMyInfo() {
+  @action async getMoodBoardList() {
     try {
-      const data = await MoodBoardListRepository.getMyInfo();
-      console.log(data.data.data);
-      this.info = await data.data.data;
+      const data = await MoodBoardListRepository.getMoodBoardList();
+      console.log(data);
+      this.MoodBoardList = await data.data.result;
     } catch (err) {
       console.error(err);
     }
