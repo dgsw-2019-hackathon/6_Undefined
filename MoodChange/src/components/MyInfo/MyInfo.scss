@@ -4,25 +4,97 @@
     background-position: center center;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+    
 
     &-NavBar {
-        
-        width: 500px;
-        height: 500px;
+        width: 14.6%;
+        height: 100%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
         &-Profile {
             background-color: #ebeced;
+            width: 100%;
+            height: 33%;
+            width: 280px;
+            height: 323px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &-img {
+                display: block;
+                margin: 0px auto;
+                width: 150px;
+                height: 150px;
+            }
+            &-value {
+                font-size: 22px;
+                text-align: center;
+            }
         }
         &-Account {
             background-color: #ebeced;
+            width: 100%;
+            height: 33%;
+            width: 280px;
+            height: 323px;
+            border-top: 1px solid #a0a0a0;
+            border-bottom: 1px solid #a0a0a0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &-img {
+                display: block;
+                margin: 0px auto;
+                width: 150px;
+                height: 150px;
+            }
+            &-value {
+                font-size: 22px;
+                text-align: center;
+            }
         }
         &-MyBoard {
             background-color: #ebeced;
+            width: 100%;
+            height: 33%;
+            width: 280px;
+            height: 323px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &-img {
+                display: block;
+                margin: 0px auto;
+                width: 150px;
+                height: 150px;
+            }
+            &-value {
+                font-size: 22px;
+                text-align: center;
+            }
         }
     }
 
-    &-MyInfo-Main {
+    &-Main {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        
 
-
+        &-Content {
+            width: 100%;
+        }
     }
+}
+
+.select{
+    background-color: #c5c9c7;
 }
