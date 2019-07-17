@@ -12,11 +12,13 @@ class Account extends Component {
                 </div>
                 <div className="Account-Id">
                     <div className="Account-Id-left">ID</div>
-                    <div className="Account-Id-right">user0000</div>
+                    <div className="Account-Id-right">UserId</div>
                 </div>
                 <div className="Account-Pw">
                     <div className="Account-Pw-left">PW</div>
-                    <div className="Account-Pw-right">******</div>
+                    <div className="Account-Pw-right">
+                        <input className="Account-Pw-right-input" placeholder="******" />
+                    </div>
                 </div>
                 <div className="Account-Fix">
                     <button type="button" className="Account-Fix-btn">

@@ -16,6 +16,7 @@
         justify-content: center;
         padding: 15px 0px;
         margin-bottom: 70px;
+        cursor: not-allowed;
 
         &-left {
             text-align: center;
@@ -43,6 +44,7 @@
         justify-content: center;
         padding: 15px 0px;
         margin-bottom: 70px;
+        cursor: not-allowed;
 
         &-left {
             text-align: center;
@@ -81,7 +83,15 @@
             text-align: center;
             width: 80%;
             font-size: 20pt;
-            padding: 18px 0px;
+            padding: 0px 0px;
+
+            &-input {
+                background-color: #d0d1d7;
+                border: none;
+                width: 90%;
+                height: 50px;
+                font-size: 22pt;
+            }
         }
     }
     &-Fix {
@@ -93,6 +103,7 @@
             width: 155px;
             height: 45px;
             font-size: 13pt;
+            cursor: pointer;
 
             &-icon {
                 width: 18px;
