@@ -14,7 +14,7 @@ class Profile extends Component {
                 </div>
                 <div className="Profile-Fix">
                     <button type="button" className="Profile-Fix-btn">
-                        <img className="Profile-Fix-btn-icon" src={fixIcon}/> 프로필 수정
+                        <img className="Profile-Fix-btn-icon" src={fixIcon} alt=""/> 프로필 수정
                     </button>
                 </div>
             </div>

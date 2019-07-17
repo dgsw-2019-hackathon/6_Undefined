@@ -6,6 +6,10 @@ class Account extends Component {
     render() {
         return (
             <div className="Account">
+                <div className="Account-UserName">
+                    <div className="Account-UserName-left">사용자명</div>
+                    <div className="Account-UserName-right">안채원</div>
+                </div>
                 <div className="Account-Id">
                     <div className="Account-Id-left">ID</div>
                     <div className="Account-Id-right">user0000</div>
@@ -16,7 +20,7 @@ class Account extends Component {
                 </div>
                 <div className="Account-Fix">
                     <button type="button" className="Account-Fix-btn">
-                        <img className="Account-Fix-btn-icon" src={fixIcon}/> 프로필 수정
+                        <img className="Account-Fix-btn-icon" src={fixIcon} alt=""/> 프로필 수정
                     </button>
                 </div>
             </div>
