@@ -1,0 +1,25 @@
+{
+  "name": "mood_change",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ctx": "^0.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5",
+    "ngrok": "^3.2.2",
+    "nodemon": "^1.19.1",
+    "sequelize": "^5.10.1",
+    "yarn": "^1.17.3"
+  }
+}
