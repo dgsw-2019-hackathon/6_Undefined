@@ -2,9 +2,9 @@ import { SERVER } from 'config/config.json';
 import axios from 'axios';
 
 class UserMoodBoardListRepository {
-  async getMyInfo() {
+  async getUserMoodBoardList() {
     try {
-      return await axios.get(`${SERVER}/members/my`, {
+      return await axios.get(`${SERVER}/api/profile/my_board`, {
         headers: {
           'x-access-token': localStorage.getItem('token')
         }

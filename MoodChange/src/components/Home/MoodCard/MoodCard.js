@@ -11,8 +11,9 @@ class MoodCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likeCheck: true,
-      comment: ''
+      likeCheck: false,
+      comment: '',
+      likeCount: this.props.boardLike
     };
   }
 
@@ -39,10 +40,34 @@ class MoodCard extends Component {
       });
   };
 
+  applyWriteLike = () => {
+    const req = {
+      board_id: this.props.boardId,
+      like: this.state.likeCheck
+    };
+
+    axios
+      .post(`${SERVER}/api/mood_board/board_like`, req, {
+        headers: {
+          'x-access-token': localStorage.getItem('token'),
+        },
+      })
+      .then((res) => {
+        console.log(res.data.like_count);
+        this.setState({
+          likeCount: res.data.like_count
+        });
+      })
+      .catch((err) => {
+        console.log(err.response.message);
+      });
+  };
+
   handleChangeLike = () => {
     this.setState({
       likeCheck: !this.state.likeCheck
     });
+    this.applyWriteLike();
   };
 
   handleChangeComment = e => {
@@ -66,8 +91,8 @@ class MoodCard extends Component {
         </div>
         <div className="MoodCard-foot">
           <div className="MoodCard-foot-like">
-            <img src={ this.state.likeCheck === true ? unLike : like } alt="like" onClick={this.handleChangeLike} />
-            <span>12</span>
+            <img src={ this.state.likeCheck === false ? unLike : like } alt="like" onClick={this.handleChangeLike} />
+            <span>{ this.state.likeCount }</span>
           </div>
           <div className={`MoodCard-foot-comment ${ this.props.commentCheck === true ? '' : 'hide' }`}>
             <img src={ profile } alt="profile" />

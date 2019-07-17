@@ -57,6 +57,7 @@ class Home extends Component {
                   contents={board.content}
                   commentCheck={board.comment_check}
                   boardId={board.id}
+                  boardLike={board.like}
                 />
               );
             })

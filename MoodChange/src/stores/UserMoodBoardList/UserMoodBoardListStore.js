@@ -4,13 +4,13 @@ import UserMoodBoardListRepository from './UserMoodBoardListRepository';
 
 @autobind
 class UserMoodBoardListStore {
-  @observable info = [];
+  @observable UserMoodBoardList = [];
 
-  @action async getMyInfo() {
+  @action async getUserMoodBoardList() {
     try {
-      const data = await UserMoodBoardListRepository.getMyInfo();
-      console.log(data.data.data);
-      this.info = await data.data.data;
+      const data = await UserMoodBoardListRepository.getUserMoodBoardList();
+      console.log(data);
+      this.UserMoodBoardList = await data.data.result;
     } catch (err) {
       console.error(err);
     }
