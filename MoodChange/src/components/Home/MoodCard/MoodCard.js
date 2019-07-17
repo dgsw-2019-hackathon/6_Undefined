@@ -13,7 +13,7 @@ class MoodCard extends Component {
     this.state = {
       likeCheck: false,
       comment: '',
-      likeCount: this.props.boardLike
+      // likeCount: this.props.boardLike
     };
   }
 
@@ -92,7 +92,7 @@ class MoodCard extends Component {
         <div className="MoodCard-foot">
           <div className="MoodCard-foot-like">
             <img src={ this.state.likeCheck === false ? unLike : like } alt="like" onClick={this.handleChangeLike} />
-            <span>{ this.state.likeCount }</span>
+            <span></span>
           </div>
           <div className={`MoodCard-foot-comment ${ this.props.commentCheck === true ? '' : 'hide' }`}>
             <img src={ profile } alt="profile" />
